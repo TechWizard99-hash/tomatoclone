@@ -5,6 +5,8 @@ export const StoreContext=createContext(null)
 const StoreContextProvider=(props)=>{
 
     const [cardItems,setCardItems]=useState({});
+    const url="http://localhost:4000"
+    const [token,setToken]=useState("")
     const addToCart=(itemId)=>{
         if(!cardItems[itemId]){
             setCardItems((prev)=>({...prev,[itemId]:1}))
@@ -18,12 +20,20 @@ const StoreContextProvider=(props)=>{
         setCardItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
 
     }
-
-     useEffect(()=>{
-       console.log(cardItems);
-     },[cardItems])
+    const getTotalCartAmount=()=>{
+        let totalAmount=0;
+        for(const item in cardItems){
+            if(cardItems[item]>0){
+                let itemInfo=food_list.find((product)=>product._id===item)
+              totalAmount+=itemInfo.price*cardItems[item];
+            }
+              
+        }
+        return totalAmount;
+    }
+    
     const contextValue={
-       food_list,cardItems,setCardItems,addToCart,removeFromCart
+       food_list,cardItems,setCardItems,addToCart,removeFromCart,getTotalCartAmount,url,token,setToken
 
     }
     return(

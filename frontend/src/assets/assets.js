@@ -21,7 +21,7 @@ import food_7 from './food_7.png'
 import food_8 from './food_8.png'
 import food_9 from './food_9.png'
 import food_10 from './food_10.png'
-import food_11 from './food_11.png'
+import food_11 from './food_11.png'            
 import food_12 from './food_12.png'
 import food_13 from './food_13.png'
 import food_14 from './food_14.png'
@@ -59,6 +59,11 @@ import profile_icon from './profile_icon.png'
 import bag_icon from './bag_icon.png'
 import logout_icon from './logout_icon.png'
 import parcel_icon from './parcel_icon.png'
+// import profile_icon from './profile_icon.png'
+// const profile_icon = require('./profile_icon.png');
+// const bag_icon = require('./bag_icon.png');
+// const logout_icon = require('./logout_icon.png');
+
 
 export const assets = {
     logo,
@@ -79,8 +84,10 @@ export const assets = {
     profile_icon,
     logout_icon,
     bag_icon,
-    parcel_icon
-}
+    parcel_icon}
+
+  
+   
 
 export const menu_list = [
     {
