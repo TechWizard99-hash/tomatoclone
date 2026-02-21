@@ -1,0 +1,29 @@
+.food-display{
+    margin-top: 30px;
+    /* width: 100%;
+    max-width: 1200px; /* Adjust based on your layout */
+    /* margin: auto */ 
+
+}
+.food-display h2{
+    font-size: max(2vw,24px);
+    font-weight: 600;
+}
+.food-display-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 30px;
+    gap: 24px;
+    row-gap: 32px;
+    align-items: stretch;
+}
+.food-display-list .food-item {
+    min-height: 380px;
+}
+.food-display .no-items-msg{
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #666;
+    padding: 2rem;
+    font-size: 1.1rem;
+}
