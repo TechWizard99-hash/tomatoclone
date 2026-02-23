@@ -5,7 +5,7 @@ import Stripe from "stripe"
 const stripe = new Stripe(process.env.STRIP_SECRET_KEY)
 //placing user order for frontend
 const placeOrder =async (req,res)=>{
-    const frontend_url="https://tomatoclone-frontend.onrender.com"
+    const frontend_url="https://tomatoclone-front-end.onrender.com"
     try{
         const newOrder=new orderModel({
             userId:req.body.userId,
