@@ -6,7 +6,7 @@ export const StoreContext=createContext(null)
 const StoreContextProvider=(props)=>{
 
     const [cardItems,setCardItems]=useState({});
-    const url="https://tomatoclone-backend-hsm0.onrender.com"
+    const url="https://tomatoclone-back-end-fv7d.onrender.com"
     const [token,setToken]=useState("")
     const [food_list,setFoodList]=useState([])
     const addToCart=async (itemId)=>{
