@@ -9,7 +9,7 @@ import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
-  const url ="https://tomatoclone-backend-hsm0.onrender.com"
+  const url ="https://tomatoclone-back-end-fv7d.onrender.com"
   return (
     <div>
       <ToastContainer/>
